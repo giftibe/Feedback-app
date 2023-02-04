@@ -4,9 +4,9 @@ function RatingSelect({select}) {
  
   const [selected, setSeleted] = useState(10)
 
-  function handleChange(e){
-    setSeleted(+e.target.value);
-    select(+e.target.value)
+  function handleChange(event){
+    setSeleted(+event.target.value);
+    select(+event.target.value)
   }
 
 
