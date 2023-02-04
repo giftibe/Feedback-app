@@ -35,7 +35,7 @@ return (
     <Card>
         <form>
             <h2>How would you rate your service with us?</h2>
-            <RatingSelect />
+            <RatingSelect select = {(rating) => setRating(rating)}/>
             <div className="input-group">
                 <input onChange={handleTextChange} type="text" placeholder='write a review' value = {text} />
                 <Button 
@@ -43,7 +43,6 @@ return (
                 version='secondary'
                 isDisabled = {btnDisabled}
                 >Send</Button>
-                {/* <button >Send</button> */}
             </div>
             {message && <div className="message">{message}</div>}
         </form>

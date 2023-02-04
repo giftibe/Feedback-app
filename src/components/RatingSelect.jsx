@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
-function RatingSelect() {
+function RatingSelect({select}) {
  
-  const [selected, isSeleted] = useState(10)
+  const [selected, setSeleted] = useState(10)
 
   function handleChange(e){
-    isSeleted(+e.target.value);
-
+    setSeleted(+e.target.value);
+    select(+e.target.value)
   }
 
 
@@ -14,8 +14,8 @@ function RatingSelect() {
     <ul className='rating'>
       <li>
         <input 
-        type="radio"
-        id='1'
+        type='radio'
+        id='num1'
         name='rating'
         value='1'
         onChange={handleChange}
@@ -26,7 +26,7 @@ function RatingSelect() {
       <li>
         <input 
         type="radio"
-        id='2'
+        id='num2'
         name='rating'
         value='2'
         onChange={handleChange}
@@ -37,7 +37,7 @@ function RatingSelect() {
       <li>
         <input 
         type="radio"
-        id='3'
+        id='num3'
         name='rating'
         value='3'
         onChange={handleChange}
@@ -48,7 +48,7 @@ function RatingSelect() {
       <li>
         <input 
         type="radio"
-        id='4'
+        id='num4'
         name='rating'
         value='4'
         onChange={handleChange}
@@ -59,7 +59,7 @@ function RatingSelect() {
       <li>
         <input 
         type="radio"
-        id='5'
+        id='num5'
         name='rating'
         value='5'
         onChange={handleChange}
@@ -70,7 +70,7 @@ function RatingSelect() {
       <li>
         <input 
         type="radio"
-        id='6'
+        id='num6'
         name='rating'
         value='6'
         onChange={handleChange}
@@ -81,7 +81,7 @@ function RatingSelect() {
       <li>
         <input 
         type="radio"
-        id='7'
+        id='num7'
         name='rating'
         value='7'
         onChange={handleChange}
@@ -92,7 +92,7 @@ function RatingSelect() {
       <li>
         <input 
         type="radio"
-        id='8'
+        id='num8'
         name='rating'
         value='8'
         onChange={handleChange}
@@ -103,7 +103,7 @@ function RatingSelect() {
       <li>
         <input 
         type="radio"
-        id='9'
+        id='num9'
         name='rating'
         value='9'
         onChange={handleChange}
@@ -114,7 +114,7 @@ function RatingSelect() {
       <li>
         <input 
         type="radio"
-        id='10'
+        id='num10'
         name='rating'
         value='10'
         onChange={handleChange}
