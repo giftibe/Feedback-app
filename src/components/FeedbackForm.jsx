@@ -31,18 +31,17 @@ function FeedbackForm({handleAdd}) {
         setText(newValue)
     }
 
-    function handleSubmit(event){
-        event.preventDefault()
-        if(text.trim().length > 10){
-            const newFeedback = {
-                text,
-                rating
-            }
-            handleAdd(newFeedback)
-            setText('')
+function handleSubmit(event){
+    event.preventDefault()
+    if(text.trim().length > 10){
+        const newFeedback = {
+            text,
+            rating
         }
+        handleAdd(newFeedback)
+        setText('')
     }
-
+}
 return (
     <Card>
         <form onSubmit={handleSubmit}>
